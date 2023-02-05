@@ -7,22 +7,38 @@
     android:padding="8dp"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/ivQrCode"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:src="@mipmap/ic_launcher"
+
+    <RelativeLayout
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivQrCode"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_helper_visibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="qrcode generate result"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/etData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
-        app:layout_constraintTop_toBottomOf="@id/ivQrCode"
+        app:layout_constraintTop_toBottomOf="@id/container1"
         android:layout_marginTop="8dp"
         android:hint="Enter data"/>
 
